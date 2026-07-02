@@ -1,4 +1,4 @@
-package com.duke.maintenance;
+package com.duke.maintenance.vehicle;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
