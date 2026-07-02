@@ -1,8 +1,30 @@
 HELP.md
+
+### Secrets / Local Environment ###
+.env
+*.env
+.env.*
+!.env.example
+
+application-local.properties
+**/application-local.properties
+
+### Maven / Backend ###
 target/
 .mvn/wrapper/maven-wrapper.jar
+*.class
+
+# Keep target folders inside src if needed
 !**/src/main/**/target/
 !**/src/test/**/target/
+
+### Frontend ###
+node_modules/
+frontend/node_modules/
+dist/
+build/
+frontend/dist/
+frontend/build/
 
 ### STS ###
 .apt_generated
@@ -14,7 +36,7 @@ target/
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -25,9 +47,14 @@ target/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
+
+# Keep build folders inside src if needed
 !**/src/main/**/build/
 !**/src/test/**/build/
 
 ### VS Code ###
 .vscode/
+
+### OS Files ###
+.DS_Store
+Thumbs.db
