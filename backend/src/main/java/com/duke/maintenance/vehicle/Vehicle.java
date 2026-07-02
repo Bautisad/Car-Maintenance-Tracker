@@ -1,4 +1,4 @@
-package com.duke.maintenance;
+package com.duke.maintenance.vehicle;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
