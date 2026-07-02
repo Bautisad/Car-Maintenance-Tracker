@@ -1,5 +1,6 @@
 package com.duke.maintenance.vehicle;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,7 +13,9 @@ public class Vehicle {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "vehicle_year")
     private Integer year;
+    
     private String make;
     private String model;
     private Integer currentMileage;
