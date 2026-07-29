@@ -1,0 +1,26 @@
+{
+  "name": "car-maintenance-tracker",
+  "version": "1.0.0",
+  "description": "A full stack web app that tracks user's vehicle maintenance. Also recommends the required services based on mileage.",
+  "main": "index.js",
+"scripts": {
+  "backend": "cd backend && .\\mvnw.cmd spring-boot:run",
+  "frontend": "cd frontend && npm run dev",
+  "dev": "concurrently -k \"npm run backend\" \"npm run frontend\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bautisad/Car-Maintenance-Tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Bautisad/Car-Maintenance-Tracker/issues"
+  },
+  "homepage": "https://github.com/Bautisad/Car-Maintenance-Tracker#readme",
+  "devDependencies": {
+    "concurrently": "^10.0.4"
+  }
+}
