@@ -17,7 +17,7 @@ import com.duke.maintenance.vehicle.VehicleRepository;
 
 @RestController
 @RequestMapping("/api/maintenance")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "${app.frontend.url}")
 public class MaintenanceLogController {
 
     private final MaintenanceLogRepository maintenanceLogRepository;
