@@ -1,0 +1,47 @@
+databases:
+  - name: autotrack-db
+    plan: free
+    region: oregon
+
+services:
+  - type: web
+    name: autotrack-backend
+    runtime: docker
+    repo: https://github.com/Bautisad/Car-Maintenance-Tracker.git
+    rootDir: backend
+    plan: free
+    envVars:
+      - key: DB_HOST
+        fromDatabase:
+          name: autotrack-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: autotrack-db
+          property: port
+      - key: DB_NAME
+        fromDatabase:
+          name: autotrack-db
+          property: database
+      - key: DB_USERNAME
+        fromDatabase:
+          name: autotrack-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: autotrack-db
+          property: password
+      - key: FRONTEND_URL
+        sync: false
+
+  - type: web
+    name: autotrack-frontend
+    runtime: node
+    repo: https://github.com/Bautisad/Car-Maintenance-Tracker.git
+    rootDir: frontend
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NEXT_PUBLIC_API_URL
+        sync: false
